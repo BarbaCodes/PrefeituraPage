@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Dimensões do body*/
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*Configurando meu display grid, e em seguida definindo as áreas*/
+#container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .15fr auto;
+    grid-template-areas: "cabecalho"
+                         "conteudo-principal";
+    height: 100vmin;
+}
+
+/*DEFININDO AS ÁREAS DA PÁGINA*/
+#cabecalho {
+    grid-area: cabecalho;
+    background-color: #AC121C;
+}
+
+#conteudo-principal {
+    grid-area: conteudo-principal;
+    background-color: rgb(255, 255, 255);
+}
+
+#conteudo {
+    margin: 50px auto;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F3EFEF;
+}
+
+.title-h2 {
+    font: normal lighter 1.4em sans-serif;
+    color: #013479;
+
+}
+
+.title-h3 {
+    display: block;
+    font: normal bold .98em sans-serif;
+    margin-top: 40px;
+    width: 100%;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: rgb(163, 163, 163);
+}
+
+#conteudo-interno {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    flex-direction: column;
+    margin: 0;
+}
+
+#filtro {
+    border-color: #3a579d;
+    border-style: solid;
+    border-width: .3px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 500px;
+}
+
+#logo-cz {
+    height: 80px;
+    margin-left: 15px;
+}
+
+#ante {
+    margin: 40px auto 60px auto;
+}
+
+#filtro {
+    height: 34px;
+    padding-left: 8px;
+}
+
+#pesquisar-botom {
+    position: absolute;
+    color: #013479;
+    top: 271px;
+    margin-left: 8px;
+    transition: all .7s;
+}
+
+#pesquisar-botom:hover {
+    transform: scale(1.15);
+    transition: all .7s;
+    color: rgb(0, 32, 77);
+}
+
+#categorias {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-lista {
+    width: 150px;
+    height: 95px;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    padding-bottom: 5px;
+}
+
