@@ -56,17 +56,20 @@ function criaHtml(nome, cpf, descricao, data, entregue, emAndamento, finalizado)
 
         <li><strong>Situação da solicitação</strong></li>
 
+
         <details class="lista-situacao">
-            <input type="radio" class="entregue" ${entregue ? 'checked' : ' '}>
-            <label for="entregue" >Entregue</label>
-            <br>
-            <input type="radio" class="andamento" ${emAndamento ? 'checked' : ' '} >
-            <label for="andamento">Em andamento</label>
-            <br>
-            <input type="radio" class="finalizado" ${finalizado ? 'checked' : ' '}>
-            <label for="finalizado">Finalizado</label>
-            <br>
-            <button class="at-situacao">ATUALIZAR</button>
+        <span class="checks ${entregue ? 'ativec' : ' '}"></span>
+        <label for="entregue">Entregue</label>
+        <br>
+
+        <span class="checks ${emAndamento ? 'ativec' : ' '}"></span>
+        <label for="andamento">Em andamento</label>
+        <br>
+
+        <span class="checks ${finalizado ? 'ativec' : ' '}"></span>
+        <label for="finalizado">Finalizado</label>
+        <br>
+        <button class="at-situacao">ATUALIZAR</button>
         </details>
     </ul>
 

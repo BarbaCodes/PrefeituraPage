@@ -68,7 +68,7 @@ body{
     display: flex;
     width: 100%;
     align-items: center;
-
+    
     flex-direction: column;
     margin: 0;
 }
@@ -205,10 +205,6 @@ body{
     font: normal bold 1.2em sans-serif;
 }
 
-.item-lista-solicitacao {
-
-}
-
 .cancela-soli{
     position: absolute;
     left: 90%;
@@ -228,8 +224,30 @@ body{
     width: 100%;
 }
 
+.lista-situacao span{
+    display: inline-block;
+    margin: 3px 0;
+}
+
 .at-situacao {
     border-radius: 4px;
+}
+
+.back {
+    position: absolute;
+    top: 39.4%;
+    left: 15%;
+}
+
+.checks{
+    width: 14px;
+    display: inline-block;
+    margin-top: 15px;
+    height: 10px;
+}
+
+.ativec {
+    background-color: rgb(58, 141, 58);
 }
 
 li {
