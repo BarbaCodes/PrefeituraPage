@@ -16,7 +16,7 @@
     <div id="container">
         <div id="conteudo-principal">
             <section class="card">
-                <form action="">
+                <form action="javascript:;">
                     <div id="log">
                         <label id="login">Login de Funcionário</label>
                     </div>
@@ -28,11 +28,12 @@
                         <label id="label-senha" for="senha">Senha:</label>
                         <input id="senha" placeholder="Insira sua senha..." type="password">
                     </div>
-                    <button id="button" type="submit" onclick="enviarDados()">Entrar</button>
+                    <button class="btnHandlerJoin" id="button">Entrar</button>
+                    <button class="btnHandlerRegister" id="button">Cadastrar</button>
                 </form>
             </section>
         </div>
-        <script src="./script.js"></script>
+        <script src="./main.js"></script>
     </div>
 </body>
 </html>
