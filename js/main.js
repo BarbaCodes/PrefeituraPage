@@ -6,5 +6,8 @@ document.getElementsByClassName('btnHandlerRegister')[0].addEventListener('click
 });
 
 document.getElementsByClassName('btnHandlerJoin')[0].addEventListener('click', () => {
-  window.location.href = "login.html"
+  window.location.href = "index.html";
+})
+.catch(error => {
+    console.error('Erro ao buscar dados:', error);
 });

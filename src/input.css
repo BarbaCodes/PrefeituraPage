@@ -99,7 +99,7 @@ body{
 #pesquisar-botom {
     position: absolute;
     color: #013479;
-    top: 340px;
+    top: 270px;
     margin-left: 2px;
     cursor: pointer;
     transition: all .7s;
@@ -248,6 +248,77 @@ body{
 
 .ativec {
     background-color: rgb(58, 141, 58);
+}
+
+#meu-form {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    height: auto;
+    background-color: #d5cbcb;
+    box-shadow: 1px 1.5px 10px rgba(0, 0, 0, 0.356);
+}
+
+#ficha-cria{
+    width: 90%;
+}
+
+#meu-form input {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+#meu-form label {
+    font: normal bold .9em sans-serif;
+
+}
+
+#adiciona-servico{
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+#lista-fichas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98%;
+    margin: auto;
+    gap: 15px;
+}
+
+.item-ficha{
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d5cbcb;
+    height: auto;
+    width: 220px;
+}
+
+#servicos-existente {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+}
+
+.item-existente {
+    width: 280px;
+    height: auto;
+    padding: 10px;
+    background-color: #a9bdeb;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(6, 6, 6);
+    border-radius: 5px;
 }
 
 li {

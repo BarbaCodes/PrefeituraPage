@@ -1,49 +1,26 @@
 //Sistema responsável por exibir as solicitações ao funcionário
 
 //Simulando um banco de dados
-let bancoDados = [{
-    nome: "Cauã Pires Soares",
-    cpf: "113.424.543-77",
-    descricao: "Remoção de árvore na rua almeida",
-    data: "11/10/2023",
-    entregue: false,
-    emAndamento: false,
-    finalizado: true
-},
+let bancoDados = [];
 
-{
-    nome: "Riquelme Oliveira",
-    cpf: "141.332.613-17",
-    descricao: "Consertar vazamento da água da cagepa, rua belmonte",
-    data: "01/09/2023",
-    entregue: false,
-    emAndamento: true,
-    finalizado: false
-},
+// Puxando dados do servidor express
+fetch(`http://localhost:3000/requerimentos`)
+.then(response => response.json())
+.then(data => {
+    data.forEach(element => {
+        bancoDados.push(element);
+        saidaElemento.innerHTML += criaHtml(element.nome, element.cpf, element.descricao, element.status);
+    });
+})
+.catch(error => {
+    console.error('Erro ao buscar dados:', error);
+});
 
-{
-    nome: "Daniel Macho",
-    cpf: "242.242.242-24",
-    descricao: "Remoção de árvore na rua almeida",
-    data: "11/10/2023",
-    entregue: true,
-    emAndamento: false,
-    finalizado: false
-},
-{
-    nome: "Carlos ALberto",
-    cpf: "113.424.543-77",
-    descricao: "Remoção de árvore na rua almeida",
-    data: "11/10/2023",
-    entregue: false,
-    emAndamento: false,
-    finalizado: true
-}]
 
 let saidaElemento = document.querySelector("#lista-soliticoes")
 
 
-function criaHtml(nome, cpf, descricao, data, entregue, emAndamento, finalizado) {
+function criaHtml(nome, cpf, descricao, status) {
     let elementoHtml = `<li class="item-lista-solicitacao">
     <ul class="dados">
         <p class="name-req">${nome}</p>
@@ -52,25 +29,7 @@ function criaHtml(nome, cpf, descricao, data, entregue, emAndamento, finalizado)
         </span>
         <li><strong>CPF:</strong> ${cpf}</li>
         <li><strong>Descrição:</strong> ${descricao}</li>
-        <li><strong>Data de solicitação:</strong> ${data}</li>
-
-        <li><strong>Situação da solicitação</strong></li>
-
-
-        <details class="lista-situacao">
-        <span class="checks ${entregue ? 'ativec' : ' '}"></span>
-        <label for="entregue">Entregue</label>
-        <br>
-
-        <span class="checks ${emAndamento ? 'ativec' : ' '}"></span>
-        <label for="andamento">Em andamento</label>
-        <br>
-
-        <span class="checks ${finalizado ? 'ativec' : ' '}"></span>
-        <label for="finalizado">Finalizado</label>
-        <br>
-        <button class="at-situacao">ATUALIZAR</button>
-        </details>
+        <li><strong>Status:</strong> ${status}</li>
     </ul>
 
 </li>`
@@ -78,9 +37,27 @@ function criaHtml(nome, cpf, descricao, data, entregue, emAndamento, finalizado)
     return elementoHtml;
 }
 
-for (let item of bancoDados) {
-    let elemento = criaHtml(item.nome, item.cpf, item.descricao, item.data, item.entregue, item.emAndamento, item.finalizado)
+//Criar elemento HTML para um usuário do serviço (FICHAS)
+let exibir = document.querySelector("#lista-fichas")
 
-    saidaElemento.innerHTML += `${elemento}`
+function criaHtmlFicha(nome, cpf,  numeroFicha) {
+    let elementoHtml = `   <li class="item-ficha">
+
+    </p>
+    <p><strong>Nome:</strong> ${nome}
+
+    </p>
+    <p><strong>CPF:</strong> ${cpf}
+
+    </p>
+    <p><strong>Número da ficha:</strong> ${numeroFicha}
+
+    </p>
+</li>`
+
+    return elementoHtml;
 }
 
+document.getElementsByClassName('back')[0].addEventListener('click', () => {
+    window.location.href = '../index.html'
+});
