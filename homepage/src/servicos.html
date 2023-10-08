@@ -50,15 +50,17 @@
 
                             <li><strong>Situação da solicitação</strong></li>
 
-                            <details id="lista-situacao">
-                                <input type="checkbox" name="situacao" id="entregue">
+                            <details class="lista-situacao">
+                                <input type="radio" name="situacao" class="entregue">
                                 <label for="entregue">Entregue</label>
                                 <br>
-                                <input type="checkbox" name="situacao" id="andamento">
+                                <input type="radio" name="situacao" class="andamento">
                                 <label for="andamento">Em andamento</label>
                                 <br>
-                                <input type="checkbox" name="situacao" id="finalizado">
+                                <input type="radio" name="situacao" class="finalizado">
                                 <label for="finalizado">Finalizado</label>
+                                <br>
+                                <button class="at-situacao">ATUALIZAR</button>
                             </details>
                         </ul>
 
@@ -67,6 +69,8 @@
             </div>
         </div>
     </section>
+
+    <script src="/PrefeituraPage/homepage/js/script.js"></script>
 </body>
 
 </html>
