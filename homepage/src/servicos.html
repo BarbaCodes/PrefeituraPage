@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina que auxilia o usuario na sua solicitao para atendimento na prefeitura">
+    <meta name="keywords" content="solicitao, prefeitura, prefeitura de cajazeiras, cajazeiras">
+    <meta name="author" content="Cauã Pires Soares">
+    <!-- ADD nome dos participantes -->
+    <meta name="author" content="Daniel Lima Fernandes">
+    <meta name="author" content="Carlos Eduardo Oliveira Lopes">
+    <meta name="author" content="Riquelme ">
+    <meta name="author" content="João Gabriel Vieira Silva">
+    <link rel="stylesheet" href="/PrefeituraPage/homepage/src/input.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="/dist/output.css" rel="stylesheet"> 
+    <title>Solicitação de serviços</title>
+</head>
+
+<body id="container">
+    <header id="cabecalho">
+        <img src="/PrefeituraPage/homepage/img/logo-prefeitura.png" alt="Logo da prefeitura de cajazeiras" id="logo-cz">
+    </header>
+
+    <section id="conteudo-principal">
+        <div id="conteudo">
+            <h2 class="serv-sol">Serviços solicitados</h2>
+            <div id="conteudo-interno">
+                <p><input type="text" name="filtro" id="filtro" placeholder="Digite a solicitação de serviço desejado">
+                    <button id="pesquisar-botom-serv"><span class="material-symbols-outlined">
+                            search
+                        </span></button></p>
+                <p id="ante">Busque pelos requerimentos abertos:</p>
+
+                </ul>
+
+                <ul id="lista-soliticoes">
+
+                    <li class="item-lista-solicitacao">
+                        <ul class="dados">
+                            <p class="name-req">Cauã Pires Soares</p>
+                            <span class="material-symbols-outlined cancela-soli">
+                                close
+                            </span>
+                            <li><strong>CPF:</strong> 167.112.773-32</li>
+                            <li><strong>Descrição:</strong> Remoção de árvore da rua almeida</li>
+                            <li><strong>Data de solicitação:</strong> 07/10/2023</li>
+
+                            <li><strong>Situação da solicitação</strong></li>
+
+                            <details id="lista-situacao">
+                                <input type="checkbox" name="situacao" id="entregue">
+                                <label for="entregue">Entregue</label>
+                                <br>
+                                <input type="checkbox" name="situacao" id="andamento">
+                                <label for="andamento">Em andamento</label>
+                                <br>
+                                <input type="checkbox" name="situacao" id="finalizado">
+                                <label for="finalizado">Finalizado</label>
+                            </details>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
