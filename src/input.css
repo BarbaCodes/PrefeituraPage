@@ -258,7 +258,7 @@ body{
     border-radius: 5px;
     margin: auto;
     height: auto;
-    background-color: #d5cbcb;
+    background-color: rgb(234, 234, 234);
     box-shadow: 1px 1.5px 10px rgba(0, 0, 0, 0.356);
 }
 
@@ -320,6 +320,36 @@ body{
     border-color: rgb(6, 6, 6);
     border-radius: 5px;
 }
+
+.est-form {
+    border-style: solid;
+    border-color: #3A579D;
+    height: 20px;
+    border-width: 1px;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #503a3a;
+    justify-content: space-between;
+}
+
+.formm {
+    border-width: 0 0 0 1px;
+    border-style: solid;
+    height: 20px;
+    padding-left: 10px;
+    background: transparent;
+    
+}
+
+.formm::placeholder{
+    color: rgb(36, 36, 36);
+}
+
+i{
+    margin-top: 3px;
+}
+
 
 li {
     display: flex;

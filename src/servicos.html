@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="/PrefeituraPage/src/input.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="/dist/output.css" rel="stylesheet"> 
+    <link href="/dist/output.css" rel="stylesheet">
     <title>Solicitação de serviços</title>
 </head>
 
 <body id="container">
     <header id="cabecalho">
-        <img src="https://www.cajazeiras.pb.gov.br/imagens/logo.png" alt="Logo da prefeitura de cajazeiras" id="logo-cz">
+        <img src="https://www.cajazeiras.pb.gov.br/imagens/logo.png" alt="Logo da prefeitura de cajazeiras"
+            id="logo-cz">
     </header>
 
     <section id="conteudo-principal">
@@ -31,38 +32,47 @@
                 <button class="back">
                     <span class="material-symbols-outlined ">
                         arrow_back
-                        </span>
+                    </span>
                 </button>
                 <p><input type="text" name="filtro" id="filtro" placeholder="Digite a solicitação de serviço desejado">
                     <button id="pesquisar-botom-serv"><span class="material-symbols-outlined">
                             search
-                        </span></button></p>
-                <p id="ante"><strong>Adicione novos serviços:</strong></p> 
+                        </span></button>
+                </p>
+                <p id="ante"><strong>Adicione novos serviços:</strong></p>
 
                 <div id="ficha-cria">
                     <form id="meu-form">
 
-                        <label for="nome-m">Nome médico</label>
-                        <input type="text" id="nome-m" oninput="validarNome(this)">
-                        
+                        <p class="est-form">
+                            <i class="far fa-user"></i>
+                            <input type="text" id="nome-m" class="formm" placeholder="Nome do médico"
+                                oninput="validarNome(this)">
+                        </p>
+
                         <script>
                             function validarNome(input) {
                                 input.value = input.value.replace(/\d/g, '');
                             }
                         </script>
 
-                        <label for="ubs">UBS</label>
-                        <input type="text" id="ubs">
 
-                        <label for="area">Área de atuação</label>
-                        <input type="text" id="area">
+                        <p class="est-form">
+                            <i class="fas fa-hospital"></i>
+                            <input type="text" id="ubs" class="formm" placeholder="Informe a UBS">
+                        </p>
+
+                        <p class="est-form">
+                            <i class="fas fa-hospital"></i>
+                            <input type="text" id="area" class="formm" placeholder="Area de atuação do médico">
+                        </p>
 
                         <label for="horario">Horário/Dia atendimento</label>
                         <input type="text" id="horario">
 
                         <label for="fichas">Número de fichas</label>
                         <input type="number" id="fichas">
-    
+
                     </form>
 
                     <button id="adiciona-servico">ADICIONAR</button>
@@ -90,9 +100,9 @@
                     <p><strong>Número da ficha:</strong> 02
 
                     <p>
-                </li/>
+                </li />
                 <li class="item-ficha">
-                    <p><strong>Nome:</strong> Riquelme Oliveira 
+                    <p><strong>Nome:</strong> Riquelme Oliveira
 
                     </p>
                     <p><strong>CPF:</strong> 15420665492
@@ -101,7 +111,7 @@
                     <p><strong>Número da ficha:</strong> 03
 
                     <p>
-                </li/>
+                </li />
                 <li class="item-ficha">
                     <p><strong>Nome:</strong> Carlos Eduardo
 
@@ -112,96 +122,97 @@
                     <p><strong>Número da ficha:</strong> 04
 
                     <p>
-                </li/>
-            </li/>
-            <li class="item-ficha">
-                <p><strong>Nome:</strong> Daniel Lima
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> Daniel Lima
 
-                </p>
-                <p><strong>CPF:</strong> 18792565432
+                    </p>
+                    <p><strong>CPF:</strong> 18792565432
 
-                </p>
-                <p><strong>Número da ficha:</strong> 05
+                    </p>
+                    <p><strong>Número da ficha:</strong> 05
 
-                <p>
-            </li/>
-        </li/>
-        <li class="item-ficha">
-            <p><strong>Nome:</strong> João Gabriel 
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> João Gabriel
 
-            </p>
-            <p><strong>CPF:</strong> 74189565422
+                    </p>
+                    <p><strong>CPF:</strong> 74189565422
 
-            </p>
-            <p><strong>Número da ficha:</strong> 06
+                    </p>
+                    <p><strong>Número da ficha:</strong> 06
 
-            <p>
-        </li/>
-    </li/>
-    <li class="item-ficha">
-        <p><strong>Nome:</strong> Cauã Bat-Girl
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> Cauã Bat-Girl
 
-        </p>
-        <p><strong>CPF:</strong> 15325369922
+                    </p>
+                    <p><strong>CPF:</strong> 15325369922
 
-        </p>
-        <p><strong>Número da ficha:</strong> 07
+                    </p>
+                    <p><strong>Número da ficha:</strong> 07
 
-        <p>
-    </li/>
-</li/>
-<li class="item-ficha">
-    <p><strong>Nome:</strong> Jarbas Oliveira
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> Jarbas Oliveira
 
-    </p>
-    <p><strong>CPF:</strong> 15320136892
+                    </p>
+                    <p><strong>CPF:</strong> 15320136892
 
-    </p>
-    <p><strong>Número da ficha:</strong> 08
+                    </p>
+                    <p><strong>Número da ficha:</strong> 08
 
-    <p>
-</li/>
-</li/>
-<li class="item-ficha">
-    <p><strong>Nome:</strong> Isaac Fernandes
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> Isaac Fernandes
 
-    </p>
-    <p><strong>CPF:</strong> 05893875412325
+                    </p>
+                    <p><strong>CPF:</strong> 05893875412325
 
-    </p>
-    <p><strong>Número da ficha:</strong> 09
+                    </p>
+                    <p><strong>Número da ficha:</strong> 09
 
-    <p>
-</li/>
-</li/>
-<li class="item-ficha">
-    <p><strong>Nome:</strong> João Augusto Braga
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> João Augusto Braga
 
-    </p>
-    <p><strong>CPF:</strong> 07582395478
+                    </p>
+                    <p><strong>CPF:</strong> 07582395478
 
-    </p>
-    <p><strong>Número da ficha:</strong> 10
+                    </p>
+                    <p><strong>Número da ficha:</strong> 10
 
-    <p>
-</li/>
-</li/>
-<li class="item-ficha">
-    <p><strong>Nome:</strong> Paulo Git
+                    <p>
+                </li />
+                </li />
+                <li class="item-ficha">
+                    <p><strong>Nome:</strong> Paulo Git
 
-    </p>
-    <p><strong>CPF:</strong> 02136549836
+                    </p>
+                    <p><strong>CPF:</strong> 02136549836
 
-    </p>
-    <p><strong>Número da ficha:</strong> 11
+                    </p>
+                    <p><strong>Número da ficha:</strong> 11
 
-    <p>
-</li/>
+                    <p>
+                </li />
             </ul>
         </div>
     </section>
 
     <script src="/PrefeituraPage/homepage/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/b3b34daf48.js" crossorigin="anonymous"></script>
     <script src="../js/servicosHandler.js"></script>
     <script src="../js/script.js"></script>
 </body>
