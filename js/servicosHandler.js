@@ -8,11 +8,11 @@ window.onload = () => {
       data.forEach(element => {
         container.innerHTML += `
         <li class="item-existente">
-          <p>Nome do médico: ${element.nomeDoutor}</p>
-          <p>UBS: ${element.ubsNome}</p>
-          <p>Área: ${element.area}</p>
-          <p>Horário: ${element.horariosAtendimento}</p>
-          <p>Vagas: ${element.ficha}</p>
+          <p><strong>Nome do médico:</strong> ${element.nomeDoutor}</p>
+          <p><strong>UBS:</strong> ${element.ubsNome}</p>
+          <p><strong>Área:</strong> ${element.area}</p>
+          <p><strong>Horário:</strong> ${element.horariosAtendimento}</p>
+          <p><strong>Vagas:</strong> ${element.ficha}</p>
         </li>
         `
       });

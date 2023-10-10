@@ -32,9 +32,26 @@ body {
 #container {
     background-color: #ffff;
     display: flex;
+    width: 370px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+}
+
+#dados {
+    margin-top: 50px;
+}
+
+.logg{
+    width: 220px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+i{
+    padding-right: 15px;
 }
 
 body .card {
@@ -43,14 +60,13 @@ body .card {
     border: 1px solid #000;
     border-radius: 3%;
     padding: 1rem 0 1rem 0;
-    margin: 0 0 2rem 0;
+    margin: 0;
     background-color: aliceblue;
-    min-width: 350px;
-    min-height: auto;
+    height: 400px;
 }
 
 .card {
-    margin-top: 30rem;
+    margin-top: 0rem;
 }
 
 /*body .card {
@@ -67,8 +83,9 @@ body .card {
 
 #log {
     font-size: 30px;
-    color: #013479;
-    margin-bottom: auto;
+    color: #292929;
+    font-weight: bold;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     padding: 5px 0 25px 0;
@@ -86,13 +103,14 @@ body .card {
 
 input {
     width: 225.2px;
-    text-align: center;
+    text-align: left;
 }
 
 button {
     display: flex;
-    background-color: #013479;
+    background-color: #673030;
     border-radius: 5px;
+    border: 0;
     color: #ffff;
     align-self: center;
     font-family: var(--f2);
@@ -101,15 +119,28 @@ button {
     width: 110px;
     height: 35px;
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:hover{
+    transform: scale(95%);
+    transition: all .5s;
+    background-color: rgb(101, 42, 42);
+}
+
+#aju-bo{
+    display: flex;
+    flex-direction: row;
+    margin: 70px auto;
+    width: 265px;
+    justify-content: space-between;
 }
 
 #div_cpf label,
 #div_senha label {
     font-size: 15px;
     font-family: var(--f2);
-    margin-top: 1rem;
     align-self: flex-start;
     margin-left: 10px;
 }
