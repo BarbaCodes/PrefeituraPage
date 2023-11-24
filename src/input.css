@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 /*Dimensões do body*/
-body{
+body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -13,24 +13,24 @@ body{
 }
 
 /*Estilos gerais*/
-*{
+* {
     font-family: sans-serif;
 }
 
 /*Configurando meu display grid, e em seguida definindo as áreas*/
-#container{
+#container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .15fr auto;
+    grid-template-rows: .15fr 500px;
     grid-template-areas: "cabecalho"
-                         "conteudo-principal";
+        "conteudo-principal";
     height: 100vmin;
 }
 
 /*DEFININDO AS ÁREAS DA PÁGINA*/
 #cabecalho {
     grid-area: cabecalho;
-    background-color: rgb(171, 18, 28);
+    background-color: #AD111E;
 }
 
 #conteudo-principal {
@@ -39,9 +39,9 @@ body{
 }
 
 #conteudo {
-    margin: 50px auto;
+    margin: 30px auto;
     width: 75%;
-    height: 100%;
+    height: 120%;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -68,9 +68,8 @@ body{
     display: flex;
     width: 100%;
     align-items: center;
-    
     flex-direction: column;
-    margin: 0;
+    margin: 0 0 80px 0;
 }
 
 #filtro {
@@ -84,11 +83,12 @@ body{
 
 #logo-cz {
     height: 80px;
+    width: 200px;
     margin-left: 15px;
 }
 
 #ante {
-    margin: 40px auto 60px auto;
+    margin: 30px 0 30px 0;
 }
 
 #filtro {
@@ -96,20 +96,37 @@ body{
     padding-left: 8px;
 }
 
+#tthg {
+    height: 34px;
+    margin: 0;
+    padding-left: 8px;
+    border-color: #3a579d;
+    border-style: solid;
+    border-width: .3px;
+    border-radius: 5px;
+    width: 500px;
+}
+
 #pesquisar-botom {
     position: absolute;
     color: #013479;
-    top:340px;
+    top: 320px;
     margin-left: 2px;
     cursor: pointer;
     transition: all .7s;
 }
 
-#pesquisar-botom-serv{
+#res {
+    margin: 0;
+
+}
+
+
+#pesquisar-botom-serv {
     position: absolute;
     color: #013479;
-    top: 271px;
-    margin-left: 2px;
+    top: 203px;
+    margin-left: 3px;
     cursor: pointer;
     transition: all .7s;
 }
@@ -149,18 +166,22 @@ body{
 }
 
 .item-lista:hover {
-    transform: scale(1.05   );
+    transform: scale(1.05);
     transition: all .5s;
 }
 
-.serv-sol{
+.serv-sol {
     font-size: 1.5em;
     border-width: 0 0 2px 0;
     border-style: solid;
     border-color: rgb(163, 163, 163);
 }
 
-#lista-soliticoes{
+.serv-sol:nth-of-type(3) {
+    margin: 50px 0 50px 0;
+}
+
+#lista-soliticoes {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -183,7 +204,6 @@ body{
     border-top-right-radius: 15px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgb(195, 195, 195);
 }
 
 .dados li {
@@ -198,19 +218,31 @@ body{
     padding-left: 5px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin: 0 0 5px 0;
+    margin: 0;
     display: block;
-    width: 98%;
+    width: 60%;
     height: 25px;
     font: normal bold 1.2em sans-serif;
 }
 
-.cancela-soli{
+.litle-cont {
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 3px;
+    height: auto;
+}
+
+.cancela-soli {
     position: absolute;
-    left: 90%;
-    top: 3%;
+    left: 92%;
+    top: 20%;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: rgb(32, 32, 32);
     transition: all .4s;
 }
 
@@ -219,12 +251,12 @@ body{
     transition: all .4s;
 }
 
-.lista-situacao{
+.lista-situacao {
     cursor: pointer;
     width: 100%;
 }
 
-.lista-situacao span{
+.lista-situacao span {
     display: inline-block;
     margin: 3px 0;
 }
@@ -235,11 +267,11 @@ body{
 
 .back {
     position: absolute;
-    top: 39.4%;
+    top: 203px;
     left: 15%;
 }
 
-.checks{
+.checks {
     width: 14px;
     display: inline-block;
     margin-top: 15px;
@@ -253,16 +285,17 @@ body{
 #meu-form {
     display: flex;
     flex-direction: column;
-    width: 230px;
+    width: 270px;
     padding: 10px;
     border-radius: 5px;
     margin: auto;
-    height: auto;
+    height: 300px;
+    justify-content: space-between;
     background-color: rgb(234, 234, 234);
     box-shadow: 1px 1.5px 10px rgba(0, 0, 0, 0.356);
 }
 
-#ficha-cria{
+#ficha-cria {
     width: 90%;
 }
 
@@ -276,7 +309,7 @@ body{
 
 }
 
-#adiciona-servico{
+#adiciona-servico {
     width: 100px;
     height: 30px;
     display: block;
@@ -284,29 +317,66 @@ body{
     cursor: pointer;
 }
 
-#lista-fichas{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 98%;
-    margin: auto;
-    gap: 7px;
-}
-
-.item-ficha{
-    font-size: .9em;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #d5cbcb;
-    height: 120px;
-    width: 220px;
-}
-
-#servicos-existente {
+#lista-fichas {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin: 0 auto 50px;
+    gap: 7px;
+    padding: 0;
+}
+
+.item-ficha {
+    font-size: .9em;
+    padding: 0;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #d5cbcb;
+    height: 90px;
+    width: 220px;
+    margin: 0 8px 50px 8px;
+    position: relative;
+}
+
+.extern {
+    background-color: #d5cbcb;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: absolute;
+    padding: 8px;
+    top: -30px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 180px;
+    height: 30px;
+}
+
+.text-ajust {
+    margin: 18px 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.more {
+    font: normal bold 1em 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0 0 5% 88%;
+    cursor: pointer;
+
+}
+
+#servicos-existente {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0 0 0;
     gap: 15px;
 }
 
@@ -314,17 +384,27 @@ body{
     width: 280px;
     height: auto;
     padding: 10px;
-    background-color: #a9bdeb;
+    background-color: #bac7e5;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(6, 6, 6);
     border-radius: 5px;
 }
 
+.item-existente>p {
+    padding: 2px;
+    margin: 2px;
+    font: normal normal .95em "Open Sans", sans-serif;
+}
+
+.item-existente>i {
+    padding: 2px
+}
+
 .est-form {
     border-style: solid;
     border-color: #3A579D;
-    height: 20px;
+    height: 40px;
     border-width: 1px;
     display: flex;
     padding: 10px;
@@ -333,20 +413,28 @@ body{
     justify-content: space-between;
 }
 
+.log-form {
+    height: 23px;
+}
+
+.logi {
+    font: normal normal .8em "Open Sans", sans-serif;
+}
+
 .formm {
     border-width: 0 0 0 1px;
     border-style: solid;
     height: 20px;
     padding-left: 10px;
     background: transparent;
-    
+
 }
 
-.formm::placeholder{
+.formm::placeholder {
     color: rgb(36, 36, 36);
 }
 
-i{
+i {
     margin-top: 3px;
 }
 
@@ -358,6 +446,7 @@ li {
 
 span {
     padding-bottom: 5px;
+
 }
 
 a {

@@ -10,7 +10,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: .15fr auto;
     grid-template-areas: "cabecalho"
-                         "conteudo-principal";
+        "conteudo-principal";
     height: 100vmin;
     margin: 0;
 }
@@ -22,7 +22,7 @@ body {
 
 #cabecalho {
     grid-area: cabecalho;
-    background-color: rgb(171, 18, 28);
+    background-color: #673030;
 }
 
 #conteudo-principal {
@@ -44,13 +44,13 @@ body {
     margin-top: 50px;
 }
 
-.logg{
+.logg {
     width: 220px;
     margin: auto;
     margin-bottom: 20px;
 }
 
-i{
+i {
     padding-right: 15px;
 }
 
@@ -108,7 +108,7 @@ input {
 
 button {
     display: flex;
-    background-color: #673030;
+    background-color: #86151f;
     border-radius: 5px;
     border: 0;
     color: #ffff;
@@ -123,13 +123,13 @@ button {
     transition: all .5s;
 }
 
-button:hover{
+button:hover {
     transform: scale(95%);
     transition: all .5s;
-    background-color: rgb(101, 42, 42);
+    background-color: rgb(182, 48, 48)
 }
 
-#aju-bo{
+#aju-bo {
     display: flex;
     flex-direction: row;
     margin: 70px auto;

@@ -3,25 +3,24 @@ window.onload = () => {
 
   // Puxando dados do servidor express
   fetch(`http://localhost:3000/servicos`)
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
       data.forEach(element => {
         container.innerHTML += `
         <li class="item-existente">
-          <p><strong>Nome do médico:</strong> ${element.nomeDoutor}</p>
-          <p><strong>UBS:</strong> ${element.ubsNome}</p>
-          <p><strong>Área:</strong> ${element.area}</p>
-          <p><strong>Horário:</strong> ${element.horariosAtendimento}</p>
-          <p><strong>Vagas:</strong> ${element.ficha}</p>
-        </li>
+          <p><strong><i class="far fa-user"></i></i></strong> - ${element.nomeDoutor} - <span class="logi">(Médico)</span></p>
+          <p><strong><i class="far fa-hospital"></i></strong> - ${element.ubsNome} - <span class="logi">(Bairro)</span></p>
+          <p><strong><i class="fas fa-user-md"></i></strong> - ${element.area}- <span class="logi">(Área)</span></p>
+          <p><strong><i class="far fa-clock"></i></strong> - ${element.horariosAtendimento} - <span class="logi">(Horário)</span></p>
+          <p><strong><i class="fas fa-ticket-alt"></i></strong> - ${element.ficha} - <span class="logi">(Nº Fichas)</span></p>
+      </li>
         `
       });
-  })
-  .catch(error => {
+    })
+    .catch(error => {
       console.error('Erro ao buscar dados:', error);
-  });
+    });
 };
-
 
 document.getElementById('adiciona-servico').addEventListener('click', () => {
   let nomeMedico = document.getElementById('nome-m').value;
@@ -32,13 +31,13 @@ document.getElementById('adiciona-servico').addEventListener('click', () => {
 
   // Puxando dados do servidor express
   fetch(`http://localhost:3000/servicos/${nomeMedico}-${ubs}-${area}-${horario}-${fichas}`)
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
       console.log(data);
-  })
-  .catch(error => {
+    })
+    .catch(error => {
       console.error('Erro ao buscar dados:', error);
-  });
+    });
 
   location.reload(true);
 });
